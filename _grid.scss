@@ -1,43 +1,11 @@
 /* 	GRID */
-
-/*_________________________________________________________________________ =LEGACY GRID */
-
-/* fixed-width styles; to be phased out */
-.g960 {
-	@extend .sd-clearfix;
-	width: 960px;
-	margin: 0 auto;
-	}
-.g160, .g200, .g240, .g300, .g310, .g320, .g380, .g400, .g460, .g540, .g640 { float: left; }
-.g160 { width: 160px; }
-.g200 { width: 200px; }
-.g240 { width: 240px; }
-.g300 { width: 300px; }
-.g310 { width: 310px; }
-.g320 { width: 320px; }
-.g380 { width: 380px; }
-.g400 { width: 400px; }
-.g460 { width: 460px; }
-.g540 { width: 540px; }
-.g640 { width: 640px; }
-
-/* old fluid grid; can also be replaced */
-.box1of4, .box2of4, .box1of2, .box2of3, .box1of3, .box2of5, .box3of5 { float: left; }
-.box1of1 { width: 100%; }
-.box1of4 { width: 25%; }
-.box2of4, .box1of2 { width: 50%; }
-.box2of3 { width: 66%; }
-.box1of3 { width: 33%; }
-.box2of5 { width: 40%; }
-.box3of5 { width: 60%; }
-
-/*_________________________________________________________________________ =NEW GRID */
+/*_________________________________________________________________________ =COOL GRID */
 
 $fixedWidth		: 960px;
 $gutterWidth	: 16px;
 
 .wrap {
-	@extend .sd-clearfix;
+	@extend .clearfix;
 	position: relative;
 	width: $fixedWidth;
 	margin-left: auto; 
@@ -45,7 +13,7 @@ $gutterWidth	: 16px;
 	}
 
 .row {
-	@extend .sd-clearfix;
+	@extend .clearfix;
 	position: relative;
 	clear: both;
 	display: block; }
@@ -83,8 +51,7 @@ $gutterWidth	: 16px;
 	padding-left: $gutterWidth/2; 
 	padding-right: $gutterWidth/2; 
 	float: left;
-	clear: none;
-	}
+	clear: none; }
 
 
  .g1-24 {width:  4.1666667%;} 
@@ -122,8 +89,7 @@ $gutterWidth	: 16px;
 	margin-right: 0;}
 .g-gutmore > * {
 	padding-left: $gutterWidth;
-	padding-right: $gutterWidth; 
-	}
+	padding-right: $gutterWidth;}
 .g-gutmore--inside {
 	margin-left: -$gutterWidth;
 	margin-right: -$gutterWidth;}
@@ -131,14 +97,12 @@ $gutterWidth	: 16px;
 	padding-left: $gutterWidth;
 	padding-right: $gutterWidth;}
 	
-.smallDisplayB, .smallDisplayI{display: none !important}
 
 @media (max-width: 960px) {
 	.wrap {
 		width: 100%;
 		padding-left: $gutterWidth/2; 
-		padding-left: $gutterWidth/2; 
-		}
+		padding-left: $gutterWidth/2; }
 
 	.wrap img {
 		max-width: 100%; }
@@ -183,8 +147,7 @@ $gutterWidth	: 16px;
 		padding-left: $gutterWidth/2; 
 		padding-left: $gutterWidth/2; 
 		float: left;
-		clear: none;
-		}
+		clear: none; }
 
 	 .sm1-24 {width:  4.1666667%;} 
 	 .sm2-24 {width:  8.3333333%;} 
@@ -209,9 +172,6 @@ $gutterWidth	: 16px;
 	.sm21-24 {width: 87.5%;} 
 	.sm22-24 {width: 91.6666667%;} 
 	.sm23-24 {width: 95.8333333%;}
-	
-	.largeDisplay{display: none}
-	.divider-vert {display: none;}
 }
 
 @media (max-width: 520px) {
@@ -222,19 +182,6 @@ $gutterWidth	: 16px;
 		width: 100%;
 		margin: 0 auto; }
 
-	.g140, 
-	.g160, 
-	.g200, 
-	.g240, 
-	.g280, 
-	.g300, 
-	.g310, 
-	.g320, 
-	.g380, 
-	.g400, 
-	.g460, 
-	.g540, 
-	.g640,
 	 .g1-24, 
 	 .g2-24, 
 	 .g3-24, 
@@ -261,10 +208,8 @@ $gutterWidth	: 16px;
 		float: none;
 		width: auto;
 		padding-right: 0;
-		padding-left: 0;
-	}
+		padding-left: 0; }
 
-	.sm-row,
 	.sm-row {
 		position: relative !important;
 		width: 100%;
@@ -332,7 +277,4 @@ $gutterWidth	: 16px;
 	.sm21-24 {width: 87.5%;} 
 	.sm22-24 {width: 91.6666667%;} 
 	.sm23-24 {width: 95.8333333%;}
-
-	.smallDisplayB{display: block !important}
-	.smallDisplayI{display: inline !important}
 }
